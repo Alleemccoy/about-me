@@ -4,7 +4,7 @@ body {
 ol, ul {
 	list-style: none;
 }
-blockquote, q {
+/* blockquote, q {
 	quotes: none;
 }
 blockquote:before, blockquote:after,
@@ -15,4 +15,4 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}
+} */
