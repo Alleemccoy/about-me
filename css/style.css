@@ -1,18 +1,17 @@
 body {
-	line-height: 1;
+	background-color: teal;
+	width: 960px;
+	margin: auto;
+	/* border: 1px solid black; */
 }
-ol, ul {
-	list-style: none;
+
+ul {
+	list-style: disc;
+	list-style-position: inside;
+	/*margin: 50px; */
+
 }
-/* blockquote, q {
-	quotes: none;
+
+ol {
+	list-style: lower-roman;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-} */
