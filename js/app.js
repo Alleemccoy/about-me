@@ -7,49 +7,49 @@ alert('Hi ' + userName + ', nice to meet you! Time for a mini pop quiz!');
 
 // write 5 questions. They MUST accept yes or no OR y or n in each case
 // examples Yes, YES, yes, yEs, yeS, YeS, yES, YEs, Y, y
-var questionOne = prompt('Do I live in Bellevue, WA?').toLowerCase();
+var answerOne = prompt('Is my name Allee McCoy?').toLowerCase();
 
-if(questionOne === 'yes' || questionOne === 'y') {
+if(answerOne === 'yes' || answerOne === 'y') {
   // console.log('you are correct');
   alert('you are correct');
-} else if(questionOne === 'no' || questionOne === 'n'){
+} else if(answerOne === 'no' || answerOne === 'n'){
   alert('nope');
 }
 
-var questionTwo = prompt('Do I live in Bellevue, WA?').toLowerCase();
+var answerTwo = prompt('Do I live in Seattle, WA?').toLowerCase();
 
-if(questionTwo === 'yes' || questionTwo === 'y') {
+if(answerTwo === 'no' || answerTwo === 'n') {
   // console.log('you are correct');
   alert('you are correct');
-} else if(questionTwo === 'no' || questionTwo === 'n'){
+} else if(answerTwo === 'yes' || answerTwo === 'y'){
   alert('WRONGO');
 }
 
-var questionThree = prompt('').toLowerCase();
+var answerThree = prompt('Do I love to travel?').toLowerCase();
 
-if (questionThree ==='yes' || questionThree === 'y') {
+if (answerThree ==='yes' || answerThree === 'y') {
+  // console.log('Of course I do!);
+  alert('Of course I do!');
+} else if(answerThree === 'no' || answerThree === 'n'){
+  alert('Are you kidding me? Of course I love to travel!');
+}
+
+var answerFour = prompt('Do I have children?').toLowerCase();
+
+if (answerFour ==='no' || answerFour === 'n') {
   // console.log('you are correct');
   alert('you are correct');
-} else if(questionThree === 'no' || questionThree === 'n'){
+} else if(answerFour === 'yes' || answerFour === 'y'){
   alert('incorrect');
 }
 
-var questionFour = prompt('').toLowerCase();
+var answerFive = prompt('Am I the funniest person you know?').toLowerCase();
 
-if (questionFour ==='yes' || questionFour === 'y') {
-  // console.log('you are correct');
-  alert('you are correct');
-} else if(questionFour === 'no' || questionFour === 'n'){
-  alert('incorrect');
+if (answerFive ==='yes' || answerFive === 'y') {
+  // console.log('Of course I am!');
+  alert('Of course I am!');
+} else if(answerFive === 'no' || answerFive === 'n'){
+  alert('Incorrect, please try again...');
 }
 
-var questionFive = prompt('').toLowerCase();
-
-if (questionFive ==='yes' || questionFive === 'y') {
-  // console.log('you are correct');
-  alert('you are correct');
-} else if(questionFive === 'no' || questionFive === 'n'){
-  alert('incorrect');
-}
-
-alert('Thank you for getting to know me,' + userName + '!');
+alert('Thank you for getting to know me, ' + userName + '!');
