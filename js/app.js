@@ -54,60 +54,44 @@ if (answerFive ==='yes' || answerFive === 'y') {
 } else if(answerFive === 'no' || answerFive === 'n'){
   alert('Incorrect, please try again...');
 }
+
+
 // My question 6
+var loopNumber = 4
+var age = 30;
 
 
-
-
-
-
-// Below is just an example
-// New - question 6
-for (var i = 0; i < 4 ; i++) {
-  var guessMyAge = +prompt('How old do you think I am?');
-  var age = 30;
-  
-  //too high
-  if (guessMyAge > age) {
-    alert('Lower Please!');
-  }
-
-
-  //too low
-  if (guessMyAge < age) {
-    alert('Higher Please!');
-  }
-
-
+for (var i = 0; i < loopNumber; i++) {
+  var guessMyAge = parseInt(prompt('How old do you think I am?'));
   //direct hit
   if (guessMyAge === age) {
     alert('You are correct!');
     score++;
     break;
+  } else if (guessMyAge > age) {
+    alert('Lower Please!');
+  } else if (guessMyAge < age) {
+    alert('Higher Please!');
+  } 
+  if (i === loopNumber - 1) {
+    alert('Sorry, you are out of guesses! My actual age is 30')
   }
-
-
-  //out of guesses
-  if (i === 3) {
-    alert('Out of guesses, sorry!')
-  }
-
-
-
-  
   
 }
+
 
 // New - question 7
 var answerCorrectly = false;
 var NumberOfGuesses = 6;
-var myFavoriteAnimals = ['cat', 'dog', 'bat', 'eagel'];
+var myFavoriteAnimals = ['cat', 'bear', 'otter', 'whale', 'bat', 'zebra'];
+
+
 //console.log(myFavoriteAnimals);
-for (var j = 0; j < 6; j++) {
-  var guessMyFavorites = prompt(`What are my favorite animals? You get ${NumberOfGuesses - j} guesses!`).toLowerCase();
-  for (var k = 0; k < myFavoriteAnimals.length; k++) {
-    if (guessMyFavorites === myFavoriteAnimals[k]) {
-      alert('Correct');
+for (var i = 0; i < 6; i++) {
+  var guessMyFavorites = prompt(`What are my favorite animals? You get ${NumberOfGuesses - i} guesses!`).toLowerCase();
+  for (var j = 0; j < myFavoriteAnimals.length; j++) {
+    if (guessMyFavorites === myFavoriteAnimals[j]) {
+      alert(`Correct, one of my favorite animals is a ${myFavoriteAnimals[j]}`);
       answerCorrectly = true;
       score++;
       break;
@@ -116,19 +100,15 @@ for (var j = 0; j < 6; j++) {
   if (answerCorrectly) {
     break;
   }
-  // numberOfGuesses--;
+
 }
 
+if (i === NumberOfGuesses || answerCorrectly) {
+  alert(`My favorites animals are ${myFavoriteAnimals}`);
 
-alert('My favorites animals are...');
+}
+  // numberOfGuesses--;
 console.log(score);
-
-
-
-// Above is an example, mine is below
-
-
-
 
 
 alert('Thank you for getting to know me, ' + userName + '!');
