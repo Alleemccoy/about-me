@@ -65,7 +65,7 @@ if (answerFive ==='yes' || answerFive === 'y') {
 // New - question 6
 for (var i = 0; i < 4 ; i++) {
   var guessMyAge = +prompt('How old do you think I am?');
-  var age = 40;
+  var age = 30;
   
   //too high
   if (guessMyAge > age) {
