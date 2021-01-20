@@ -64,44 +64,65 @@ if (answerFive ==='yes' || answerFive === 'y') {
 // Below is just an example
 // New - question 6
 for (var i = 0; i < 4 ; i++) {
-  var guessMyAge = +prompt('How old do you think I am? You get 4 guessed!');
+  var guessMyAge = +prompt('How old do you think I am?');
   var age = 40;
+  
+  //too high
+  if (guessMyAge > age) {
+    alert('Lower Please!');
+  }
+
+
+  //too low
+  if (guessMyAge < age) {
+    alert('Higher Please!');
+  }
+
+
+  //direct hit
   if (guessMyAge === age) {
     alert('You are correct!');
     score++;
     break;
-  } else if (i < 3 && guessMyAge < age) {
-    alert('Ah not that old! Lower please!');
-  }else if (i === 3) {
-    alert('Sorry youre out of guesses. I am 40.');
   }
 
+
+  //out of guesses
+  if (i === 3) {
+    alert('Out of guesses, sorry!')
+  }
+
+
+
+  
+  
+}
 
 // New - question 7
-  var answerCorrectly = false;
-  var NumberOfGuesses = 6;
-  var myFavoriteAnimals = ['cat', 'dog', 'bat', 'eagel'];
-  //console.log(myFavoriteAnimals);
-  for (var j = 0; j < 6; j++) {
-    var guessMyFavorites = prompt(`What are my favorite animals? You get ${NumberOfGuesses - j} guesses!`).toLowerCase();
-    for (var k = 0; k < myFavoriteAnimals.length; k++) {
-      if (guessMyFavorites === myFavoriteAnimals[k]) {
-        alert('Correct');
-        answerCorrectly = true;
-        score++;
-        break;
-      }
-    }
-    if (answerCorrectly) {
+var answerCorrectly = false;
+var NumberOfGuesses = 6;
+var myFavoriteAnimals = ['cat', 'dog', 'bat', 'eagel'];
+//console.log(myFavoriteAnimals);
+for (var j = 0; j < 6; j++) {
+  var guessMyFavorites = prompt(`What are my favorite animals? You get ${NumberOfGuesses - j} guesses!`).toLowerCase();
+  for (var k = 0; k < myFavoriteAnimals.length; k++) {
+    if (guessMyFavorites === myFavoriteAnimals[k]) {
+      alert('Correct');
+      answerCorrectly = true;
+      score++;
       break;
     }
-    // numberOfGuesses--;
   }
+  if (answerCorrectly) {
+    break;
+  }
+  // numberOfGuesses--;
+}
+
 
 alert('My favorites animals are...');
 console.log(score);
 
-}
 
 
 // Above is an example, mine is below
