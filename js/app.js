@@ -38,7 +38,7 @@ function questionTwo(location) {
     alert('WRONGO');
   }
 }
-questionTwo('Seatle, Wa');
+questionTwo('Seattle, Wa');
 
 //question 3
 
@@ -87,7 +87,7 @@ questionFive('funniest');
 
 // My question 6
 function questionSix(myAge) {
-  var loopNumber = 4
+  var loopNumber = 4;
   var age = 30;
   for (var i = 0; i < loopNumber; i++) {
     var guessMyAge = parseInt(prompt('How ' + myAge + ' do you think I am?'));
@@ -102,7 +102,7 @@ function questionSix(myAge) {
       alert('Higher Please!');
     }
     if (i === loopNumber - 1) {
-      alert('Sorry, you are out of guesses! My actual age is 30')
+      alert('Sorry, you are out of guesses! My actual age is 30');
     }
   }
 }
@@ -139,6 +139,6 @@ questionSeven('animals');
 // numberOfGuesses--;
 console.log(score);
 
-alert('You scored ' + score + ' points!')
+alert('You scored ' + score + ' points!');
 
 alert('Thank you for getting to know me, ' + userName + '!');
